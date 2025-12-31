@@ -8,11 +8,11 @@ from uuid import getnode
 class Info:
     def __init__(self):
         self.update()
+
 class OS(Info):
     def update(self):
         uname = uname()
         self.name = f"{uname.system} {uname.release} ({uname.version})"
-
 class Processor(Info):
     def update(self):
         self.name = uname().machine
